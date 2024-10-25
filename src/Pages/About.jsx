@@ -8,18 +8,21 @@ import Cleaning6 from '../Images/cleaning-6.jpg'
 import Footer from '../Components/Footer'
 import '../Styles/about.css'
 import { Link } from 'react-router-dom'
+import BkImage from '../Images/cleaning-kitchen.jpg'
 
 
 function About() {
   return (
     <div className='about-container'>
-        <div className="about-main-section">
-          <div className="background-image">
-            <div className="bk-text">
-            <h2>We Clean!</h2>
-            <p>Baan Cleaning: Premier Cleaning Services in Canada</p>           
-          </div>
-          </div>
+      <div className="about-background">
+        <img src={BkImage} alt="cleaning-staff" />
+      </div>   
+          
+      <div className="bk-text">
+         <h2>We Clean!</h2>
+          <p>Baan Cleaning: Premier Cleaning Services in Canada</p>           
+      </div>
+       
              
           <div className="about-text">
             <p>With over 15 years of experience, we believe that a clean environment is a happy environment. Our mission is to provide top-quality cleaning services that consistently exceed expectations. </p>
@@ -30,7 +33,7 @@ function About() {
             <p>We are committed to using eco-friendly products and practices to ensure the safety of your family and the environment. Let us handle the cleaning, so you can focus on what matters most.</p>
           
           </div>     
-        </div>
+      
         <div className="pictures">
           <img src={Cleaning5} alt="" />
           <img src={Cleaning3} alt="" />                 

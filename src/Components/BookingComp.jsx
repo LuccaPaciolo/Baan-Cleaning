@@ -108,7 +108,15 @@ const [isPicked, setIsPicked] = useState(null)
        
     }
 
-    console.log(summaryContent)
+
+        const [pickOption, setPickOption] = useState(false)
+
+
+        console.log(pickOption)
+
+ 
+
+
 
     const sendEmail = (e) => {
         e.preventDefault(); // Prevent page refresh
@@ -136,11 +144,17 @@ const [isPicked, setIsPicked] = useState(null)
             alert('Quote sent successfully!');
           }, (err) => {
             console.error('Failed to send email. Error:', err);
-            alert('Failed to send quote.');
+            alert(
+                <div>
+
+                </div>
+            );
           });
       };
      
     
+
+
 
 
 
