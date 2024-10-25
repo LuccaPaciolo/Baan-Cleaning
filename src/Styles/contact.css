@@ -1,0 +1,140 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-background {
+    position: relative;
+    width: 100%;
+    height: 20em;
+    background-color: black;
+}
+
+.contact-background img {
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+}
+
+.contact-background-text {
+    position: absolute;
+    padding: 2em;
+    color: #fff;
+}
+
+.contact-background-text h3 {
+    font-size: 2rem;
+}
+
+.contact-background-text p {
+    font-size: 1.3rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+    color:rgb(57, 56, 56);
+}
+
+.address, .telephone, .email {
+    display: flex;
+    flex-direction: column;
+}
+
+.request-button button {
+    padding: .6em;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    background-color: var(--blue);
+    color: var(--green);
+    cursor: pointer;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;   
+    padding-bottom: 8em; 
+}
+
+.faq-intro {
+    padding: 2em;
+}
+.faq-intro h3 {
+    font-size: 2rem;
+    color: var(--blue);
+    font-weight: bolder;
+}
+
+.faq-intro p {
+    color:rgb(57, 56, 56);
+    border-bottom: 2px solid rgb(57, 56, 56);
+    padding-bottom: 2em;
+}
+
+.question {
+    padding: 2em 2em .3em 2em;
+    color: rgb(69, 157, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.question img {
+    width: 3em;
+    cursor: pointer;
+}
+
+.response {
+    color: rgb(57, 56, 56);
+    padding: 0em 2em;
+}
+
+.user-testimonial {
+    background-color: rgb(34, 33, 33);
+    display: flex;
+    flex-direction: column;
+}
+
+.user-testimonial h3 {
+    padding: 1em 2em 0em 1em;
+    font-size: 2rem;
+    color:bisque;
+}
+.user-testimonial p {
+    color:aliceblue;
+    padding: 1.6em;
+}
+
+@media  only screen and (min-width: 601px) {
+    .contact-background-text {
+
+        width: 80%;
+        padding: 4em;
+    }
+    
+    .contact-background-text h3 {
+        font-size: 2rem;
+    }
+    
+    .contact-background-text p {
+        font-size: 1.5rem;
+    }
+
+    .contact-and-faq {
+        display: flex;
+        padding: 2em;
+    }
+
+    .testimonial {
+        display: flex;
+        flex-direction: row;
+        padding: 2em;
+        justify-content: center;
+        align-items: start;
+        overflow: hidden;
+    }
+    
+    
+}

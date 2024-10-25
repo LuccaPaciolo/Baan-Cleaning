@@ -1,0 +1,118 @@
+:root {
+    --blue: #003399;
+    --green: #47FF4D;
+    --orange: #E65126;
+}
+
+.landing-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blue);
+}
+
+.landing-video {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    object-fit: cover;
+    object-position: center; 
+}
+
+.landing-text {
+    position: absolute;
+    display: flex;
+    padding: 1.2em;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.landing-page-container h1 {
+    text-align: center;  
+    color: #fff;  
+}
+
+.landing-page-container p {
+    text-align: center;
+    color: #fff;
+    font-size: .8rem;
+}
+
+.landing-page-container button {
+    display: block;
+    padding: 1em;
+    margin: 1em;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--orange);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: var(--orange)
+}
+
+.btn-Secondary {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-Secondary:hover {
+    background-color: var(--orange);
+    color: #fff;
+}
+
+
+@media only screen and (min-width: 601px)and (max-width: 1024px)  {
+    
+
+        
+    .landing-text {
+        padding: 3em;
+    }
+    
+    
+    .landing-page-container h1 {
+        margin-bottom: 1em;
+    }
+    
+    .landing-page-container p {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 1025px)  {
+
+            
+    .landing-text { 
+        width: 80%;
+        padding: 3em;
+    }
+    
+    
+    .landing-page-container h1 {
+        margin-bottom: 0em;
+        font-size: 3rem;
+ 
+    }
+    
+    .landing-page-container p {
+        font-size: 1.5rem;
+        padding: 0em 2em;
+    }
+}

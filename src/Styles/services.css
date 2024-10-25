@@ -1,0 +1,188 @@
+.service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(2, 23, 6);
+}
+
+.service-background {
+    width: 100%;
+    height: 20em;
+    background-color: black;
+    position: relative;
+}
+
+.service-background img {
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+}
+
+.service-background-text {
+    position: absolute;
+}
+
+.service-background-text h3 {
+    font-size: 1.8rem;
+    padding: 1em;
+    color:aliceblue;
+}
+
+.service-background-text p {
+    padding: 0em 2em 2em 2em;
+    color:aliceblue;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.services h4 {
+    color: orange;
+}
+
+.services p {
+    color:aliceblue;
+}
+
+.services img {
+    width: 100%;
+    margin: 3em 0em 3em 0em;
+    border-radius: 1em;
+}
+
+.why-choose-use {
+    display: flex;
+    flex-direction: column;
+}
+
+.why-us-text {
+    padding: 2em;
+}
+
+.why-us-text h3 {
+    color: var(--green)
+}
+
+.why-us-text p {
+    color:aliceblue;
+}
+
+.why-us-image img {
+    width: 100%;
+    padding: 2em;
+}
+
+.service-cards {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6em;
+}
+
+.service-cards h6 {
+    color: var(--green)
+}
+
+.service-cards p {
+    color:aliceblue;
+}
+
+.card-1, .card-2, .card-3, .card-4 {
+    margin-bottom: 2em;
+    padding: .8em;
+    background-color: rgb(3, 53, 31);
+}
+
+
+@media only screen and (min-width: 601px) {
+
+    
+    .service-background-text {
+    width: 80%;
+    }
+    .service-background-text h3 {
+        font-size: 2rem;
+        text-align: left;
+    }    
+    .service-background-text p {
+        text-align: left;
+    }
+
+    .service-1, .service-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        gap: 4em;
+        padding: 3em;
+    }
+
+    .service-1-text, .service-2-text {
+        width: 60%;
+    }
+
+    .service-1-image, .service-2-image{
+        width: 40%;
+    }
+
+    
+    .service-1-image img, .service-2-image img {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .why-choose-use {
+        display: flex;
+        flex-direction: row;
+        padding: 2em;
+    }
+
+    .why-us-text {
+        width: 60%;
+    }
+
+    .why-us-image {
+        width: 40%;
+    }
+
+    .service-cards{
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .service-background-text {
+        width: 50%;
+        }
+        .service-background-text h3 {
+            font-size: 2rem;
+            text-align: left;
+        }    
+        .service-background-text p {
+            text-align: left;
+        }
+        .service-1-text, .service-2-text {
+            padding: 5em;
+            line-height: 2.3rem;
+        }
+
+        .why-us-text {
+            width: 60%;
+            padding: 6em;
+            line-height: 2.3rem;
+        }
+
+        .service-cards {
+            font-size: 1.4rem;
+            padding: 2em;
+        }
+
+}

@@ -1,0 +1,278 @@
+.booking-comp {
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-comp form select {
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    border: 1.6px solid #00CCFF;
+}
+
+.booking-comp form select option {
+    font-size: .9rem;
+}
+.booking-comp form select option:hover {
+    color: blue;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    border-bottom: 1px solid #a6a7a8;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+    cursor: pointer;
+}
+
+.list:hover {
+    background-color: rgba(200, 244, 255, 0.446);
+}
+.list h4 {
+    color:#00CCFF;
+}
+
+.active-list {
+    background-color:#4c86fa;
+    color: #fff;
+}
+
+.active-list:hover {
+    background-color: #4c86fa;
+}
+
+.option  {
+    color: var(--blue);
+}
+
+.list img {
+    width: 3em;
+}
+
+.tab-section-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.tab-blocks {
+    background-color: var(--blue);
+    margin: 1em;
+    display: flex;
+}
+
+.tab {
+    padding: 1em;
+    margin: 0 auto;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    color:beige;
+}
+
+
+
+.active-tab {
+    background-color: #00CCFF;
+    display: block;
+}
+
+.tab-contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: none;
+}
+
+.active-content {
+    display: block;
+    padding: 1.3em;
+}
+
+
+.date input {
+    display: flex;
+    font-size: 1rem;
+    border: 2px solid var(--blue);
+    padding: .5em;
+    margin: 3em 0em;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.morning {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.time h3 {
+    color: var(--blue);
+    padding-bottom: 1em;
+    margin: 1em 0em;
+}
+
+.morning span {  
+    display: flex;
+    cursor: pointer;
+    gap: 1em;
+    padding: 1em;
+    border-radius: .4em;
+
+}
+
+.morning span img {
+    width: 1em;
+}
+
+.check {
+    border: 1px solid grey;
+}
+
+.active-check {
+    border: 1.5px solid green;
+    color: green;
+}
+
+.afternoon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.afternoon span {
+    border: 1px solid grey;
+    display: flex;
+    padding: .5em;
+    cursor: pointer;
+    padding: 1em;
+    border-radius: .4em;
+    gap: 1em;
+}
+
+.afternoon span img {
+    width: 1em;
+}
+
+.client-details {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.client-details h3 {
+    margin-top: 2em;
+    padding-bottom: 1em;
+}
+
+.client-details img {
+    width: 1em;
+}
+
+
+.first-name, 
+.last-name,
+.middle-name,
+.email,
+.tel,
+.location,
+.note
+ {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.client-details input {
+    padding: 1em;
+}
+
+.client-details h5 {
+    margin: 1em 0em;
+}
+
+textarea {
+    min-width: 250px;
+    min-height: 100px;
+    line-height: 1.5;
+    font-size: 16px;
+    padding: .4em;
+}
+
+
+.submit-buttons { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 2em;
+}
+
+.back-btn {
+    cursor: pointer;
+    padding: .4em;
+    border: 2px solid var(--blue);
+    background-color: transparent;
+    width: 8em;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.back-btn:hover {
+    color: white;
+    background-color: var(--blue);
+}
+
+.next-btn {
+    background-color: var(--blue);
+    cursor: pointer;
+    border: none;
+    padding: .5em;
+    color:#fff;
+    width: 8em;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.next-btn:hover {
+    background-color: var(--green);
+    color: var(--blue);
+}
+
+.get-quote-btn {
+    background-color: var(--orange);
+    cursor: pointer;
+    border: none;
+    padding: .5em;
+    color:#fff;
+    width: 10em;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.get-quote-btn:hover {
+    background-color: darkred;
+}
+
+.summary-section {
+    border: 1px solid lightblue;
+    padding: 1em;
+}
+
+.summary-section p {
+    color: green;
+    margin-top: 1em;
+}
+
