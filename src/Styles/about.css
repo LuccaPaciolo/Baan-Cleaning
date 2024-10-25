@@ -5,13 +5,15 @@
     align-items: center;
     background-color: var(--blue);
 
+
 }
 
 .about-background {
+    position: relative;
     width: 100%;
     height: 20em;
     background-color: var(--blue);
-    position: relative; 
+ 
 }
 
 .about-background img {
@@ -23,9 +25,9 @@
 
 .bk-text {
     position: absolute;
-    bottom: 0;
     padding: 1em;
-    color: #fff;
+    top: 3em;
+    color: white;
 }
 
 .bk-text  h2 {

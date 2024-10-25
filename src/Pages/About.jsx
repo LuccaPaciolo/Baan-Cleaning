@@ -16,15 +16,17 @@ function About() {
     <div className='about-container'>
       <div className="about-background">
         <img src={BkImage} alt="cleaning-staff" />
-      </div>   
-          
-      <div className="bk-text">
+
+        <div className="bk-text">
          <h2>We Clean!</h2>
           <p>Baan Cleaning: Premier Cleaning Services in Canada</p>           
       </div>
+      </div>   
+          
+      
        
              
-          <div className="about-text">
+     <div className="about-text">
             <p>With over 15 years of experience, we believe that a clean environment is a happy environment. Our mission is to provide top-quality cleaning services that consistently exceed expectations. </p>
 
             <p>  Backed by a team of highly experienced and dedicated professionals, we offer a comprehensive range of cleaning solutions tailored to meet diverse needs. 
