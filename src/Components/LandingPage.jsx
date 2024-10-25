@@ -7,7 +7,7 @@ function LandingPage() {
   return (
     <div className= 'landing-page-container'>
         <div className="landing-video">
-            <video className='video' src={LandingVideo} autoPlay muted loop playsInline></video>
+            <video className='video'src={LandingVideo} autoPlay muted loop playsInline></video>
         </div>
         <div className="landing-text">
             <h1>Experience Exceptional Cleaning for Your Home, Office, and More</h1>
