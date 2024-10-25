@@ -108,16 +108,6 @@ const [isPicked, setIsPicked] = useState(null)
        
     }
 
-
-        const [pickOption, setPickOption] = useState(false)
-
-
-        console.log(pickOption)
-
- 
-
-
-
     const sendEmail = (e) => {
         e.preventDefault(); // Prevent page refresh
     
