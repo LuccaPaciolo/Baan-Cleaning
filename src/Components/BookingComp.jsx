@@ -121,7 +121,7 @@ const [isPicked, setIsPicked] = useState(null)
   
        
         // Send email using EmailJS
-        emailjs.send('service_4p554r1', 'template_ygmykgs', templateParams, 'hU1X0EZX5FcevYloG')
+        emailjs.send('service_dawuidj', 'template_jgfr424', templateParams, 'TTtfpzh6j3LtVhgxF')
           .then((response) => {
             console.log('Email sent successfully!', response.status, response.text);
             alert('Quote sent successfully!');
