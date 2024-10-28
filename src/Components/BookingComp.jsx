@@ -404,7 +404,7 @@ const [isPicked, setIsPicked] = useState(null)
                             enableSearch={true}
                             placeholder='enter phone number'  required               
                         />  <h6>{errors.name}</h6>
-                         <h6>{errors.tel}</h6>
+                     
                         <div className="location">
                         <h5>Location</h5>
                         <img src={Asterisk} alt="" />                    
