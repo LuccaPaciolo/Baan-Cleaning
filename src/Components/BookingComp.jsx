@@ -49,14 +49,9 @@ const tabToggle = (index)=> {
 }
 
 const [currentTab, setCurrentTab] = useState(tab)
-
 const getPrevTab = ()=> {
       setTab(prev=> (prev-1))
   }
-  
-const getNextTab = (summary)=> {
-    setTab(prev=>(prev+1))
-}
 
 
     //for the option selected // 
@@ -97,14 +92,11 @@ const [isPicked, setIsPicked] = useState(null)
 
     const updateSummaryContent = ()=> {
         if(summaryContentRef.current) {
-            setSummmaryContent(summaryContentRef.current.innerText)
-            
+            setSummmaryContent(summaryContentRef.current.innerText)         
             
         }
-        const summaryTab = ()=> {
-            getNextTab()
-        }
-        summaryTab()
+
+        handleNext()
        
     }
 
@@ -123,9 +115,10 @@ const [isPicked, setIsPicked] = useState(null)
         tel: phone,
         location: formInput.location,
         note: formInput.note
-      
 
         };
+
+  
        
         // Send email using EmailJS
         emailjs.send('service_4p554r1', 'template_ygmykgs', templateParams, 'hU1X0EZX5FcevYloG')
@@ -134,21 +127,67 @@ const [isPicked, setIsPicked] = useState(null)
             alert('Quote sent successfully!');
           }, (err) => {
             console.error('Failed to send email. Error:', err);
-            alert(
-                <div>
-
-                </div>
-            );
+            alert('Failed to send email');
           });
-      };
-     
+         
+    };
+
+    const userSelection =  {     
+            category:services.category,
+            option:services.option?.option,
+            desc:services.option?.desc,
+            date:formInput.date,
+            time: selectedContent,
+            name:formInput.firstName + ' ' + formInput.middleName + ' ' + formInput.lastName,
+            email:formInput.email,
+            tel: phone,
+            location: formInput.location,
+            note: formInput.note
+    }
+
+    const errorMassages = {
+        category: 'Please pick category and option',
+        date: 'Please select date',
+        time: 'Please select time slot',
+        email: 'This field is required',
+        name: 'This field is required',
+        tel: 'This field is required',
+        location: 'This field is required',
+
+    }
     
+    const [errors, setErrors] = useState({
+        category: '',
+        date: '',
+        time: '',
+        general: '',
+    })
+  
+    console.log(errors.name)
+    const handleNext = ()=> {
+        if(tab === 1 && (!userSelection.category|| !userSelection.option)){
+          setErrors(prev => ({
+            ...prev, 
+            category: [errorMassages.category]
+          }))                     
+           return;
+        }else if (tab === 2 && (!userSelection.date || !userSelection.time || !userSelection.name ||!userSelection.email || !userSelection.tel || !userSelection.location)){
+            setErrors(prev => ({
+                ...prev, 
+                date: [errorMassages.date],
+                time: [errorMassages.time],
+                name: [errorMassages.name],
+                email: [errorMassages.email],
+                tel: [errorMassages.tel],
+                location:[errorMassages.location]
+            }))
+            return;
+        }
+        
+        setTab(prev=>(prev+1));
+    }
 
-
-
-
-
-  return (
+      return (
     <div className='booking-comp'>
         <div  className="tab-section-container">
             
@@ -164,7 +203,9 @@ const [isPicked, setIsPicked] = useState(null)
                 <div className={tab === 1 ? 'content active-content':'content'}>
                     <form action="">
             <h4>Select Category</h4>
+            <h6>{errors.category}</h6>
             <select onChange={serviceControl} name="category">
+                
                 <option value="select-option">select-option</option>
                 <option value="All">ALL</option>
                 <option value="Home Cleaning">Home Cleaning</option>
@@ -299,13 +340,15 @@ const [isPicked, setIsPicked] = useState(null)
                 </div>
                 <div className={tab === 2 ? 'content active-content':'content'}>
                     <h3>Select the date you prefer</h3>
-                    <div className="date">
-                      
-                        <input onChange={fetchFormInput}
+                    <div className="date">                   
+                        <h6>{errors.date}</h6>
+                        <input onChange={fetchFormInput} 
                         type="date" name='date' required/>
+                        
                     </div>
                     <div className="time">
                         <h2>Time Slot</h2>
+                        <h6>{errors.time}</h6>
                         <div className="morning">
                         {spanContents.map((content, index)=> (
                                 <span key={index} onClick={()=>handleClick(content, index)} className={activeSpan === index ? 'check active-check': 'check'}>
@@ -322,12 +365,13 @@ const [isPicked, setIsPicked] = useState(null)
                     <div className="client-details">
                     <ScrollToTop/>
                         <h3> Basic Information</h3>
-                        <form action="">
+                        <form onSubmit={fetchFormInput}>
                         <div className="first-name">
                             <h5>First Name</h5>
                             <img src={Asterisk} alt="" />
+                            
                         </div>
-                        <input onChange={fetchFormInput} name='firstName' type="text"  placeholder='enter firstname' required/>
+                        <input onChange={fetchFormInput} name='firstName' type="text"  placeholder='enter firstname' required/><h6>{errors.name}</h6>
                         
                        
                         <div className="last-name">
@@ -335,6 +379,7 @@ const [isPicked, setIsPicked] = useState(null)
                             <img src={Asterisk} alt="" />
                          </div>
                          <input onChange={fetchFormInput} name='lastName'type="text"  placeholder='enter last name' required/>
+                         <h6>{errors.name}</h6>
                         
                         <div className="middle-name">
                         <h5>Middle Name</h5>
@@ -346,21 +391,24 @@ const [isPicked, setIsPicked] = useState(null)
                         <img src={Asterisk} alt="" />                    
                         </div>
                         <input onChange={fetchFormInput} name='email'type="text"  placeholder='Enter email address' required/>
+                        <h6>{errors.email}</h6>
                         <div className="tel">
                         <h5>Phone Number</h5>
                         <img src={Asterisk} alt="" />                    
                         </div>
+                       
                         <PhoneInput
                             country={'Lebanon'}                
                             value={phone}
                             onChange={setPhone}
                             enableSearch={true}
                             placeholder='enter phone number'  required               
-                        />
+                        />  <h6>{errors.name}</h6>
+                         <h6>{errors.tel}</h6>
                         <div className="location">
                         <h5>Location</h5>
                         <img src={Asterisk} alt="" />                    
-                        </div>
+                        </div>  <h6>{errors.location}</h6>
                         <input onChange={fetchFormInput} name='location'type="text"  placeholder='Enter your address' required/>
                         <div className="Note">
                         <h5>Note</h5>               

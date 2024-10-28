@@ -39,9 +39,11 @@ function Nav() {
            
         </div>
         <div className="social-icons">
-            <img src={X} alt="X-logo" />
-            <img src={Facebook} alt="facebook-logo" />
-            <img src={Instagram} alt="instagram-logo" />
+            {/* <img src={X} alt="X-logo" /> */}
+            <a href="https://www.facebook.com/share/p/UeEBvrxQ9BvBQFzy/" target='_blank'rel='noreferrer'> <img src={Facebook} alt="facebook-logo" /></a>
+            <a href="https://www.instagram.com/baanssurecleaning?utm_source=qr&igsh=dnowazhvdnVwbzFy" target='_blank'rel='noreferrer'><img src={Instagram} alt="instagram-logo" /></a>
+           
+        
         </div>        
 
     </div>

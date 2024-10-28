@@ -51,17 +51,18 @@ function Contact() {
        
         <div className="address">
           <h6>Address</h6>
-          <h4>432 John Doe STreet</h4>
-          <p>john doe street </p>
+          <h4>3179 checknita Way Sw Edmonton</h4>
+          {/* <p>john doe street </p> */}
         </div>
         <div className="telephone">
           <h6>Telephone</h6>
-          <p>xxxxxxx (Toll-free)</p>
-          <p>xxxxxxx (Local)</p>
+          <p>587 429 6403</p>
+         {/* <p>xxxxxxx (Local)</p>  */}
         </div>
         <div className="email">
           <h6>Email</h6>
-          <p>baansure@gmail.com</p>
+          <p>Quote@baanscleaning.com</p>
+       
         </div>
   
       </div>
