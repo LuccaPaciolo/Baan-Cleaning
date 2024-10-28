@@ -31,7 +31,7 @@ function Nav() {
             {showNav && <img onClick={navToggler} className='nav-close' src={Close} alt="hamburger" />}
         </div>
         <div className= {showNav? 'mobile-view':'desktop-view'}>
-            <Link onClick={removeNav} to='/'></Link>
+            <Link onClick={removeNav} to='/'>Home</Link>
             <Link onClick={removeNav} to='/About'>About</Link>
             <Link onClick={removeNav} to='/Booking'>Booking</Link>
             <Link onClick={removeNav} to='/Services'>Services</Link>
