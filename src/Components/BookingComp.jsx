@@ -100,7 +100,10 @@ const [isPicked, setIsPicked] = useState(null)
        
     }
 
+    const [isLoading, setIsLoading] = useState(false)
+
     const sendEmail = (e) => {
+        setIsLoading(true);
         e.preventDefault(); // Prevent page refresh
     
         // Create template parameters
@@ -118,6 +121,8 @@ const [isPicked, setIsPicked] = useState(null)
 
         };
 
+        
+
   
        
         // Send email using EmailJS
@@ -128,7 +133,10 @@ const [isPicked, setIsPicked] = useState(null)
           }, (err) => {
             console.error('Failed to send email. Error:', err);
             alert('Failed to send email');
-          });
+          })
+          .finally(() => {
+            setIsLoading(false); // End loading after request completes
+        });
          
     };
 
@@ -479,7 +487,8 @@ const [isPicked, setIsPicked] = useState(null)
         <div className="submit-buttons">
             {tab === 2 || tab === 3 ? <button onClick={getPrevTab} className='back-btn'>Back</button>: ''}   
             {tab === 1 || tab === 2 ? <button onClick={()=>updateSummaryContent()} className='next-btn'> Next</button>:'' }                                 
-            {tab === 3 ? <button onClick={sendEmail} className='get-quote-btn'> Get Quote</button>:'' }                 
+            {tab === 3 ? <button onClick={sendEmail} className='get-quote-btn'>
+            {isLoading ? "Submitting..." : "Get Quote"}</button>:'' }                 
                       
         </div>  
 
