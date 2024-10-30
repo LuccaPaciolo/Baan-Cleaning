@@ -56,7 +56,7 @@ function Contact() {
         </div>
         <div className="telephone">
           <h6>Telephone</h6>
-          <p>587 429 6403</p>
+          <p>+1 587 429 6403</p>
          {/* <p>xxxxxxx (Local)</p>  */}
         </div>
         <div className="email">
