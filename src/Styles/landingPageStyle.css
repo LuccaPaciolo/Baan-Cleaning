@@ -68,8 +68,8 @@
 }
 
 .btn-primary:hover {
-    background-color: #fff;
-    color: var(--orange)
+    background-color: rgb(27, 44, 152);
+    
 }
 
 .btn-Secondary {

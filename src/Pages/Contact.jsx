@@ -43,11 +43,11 @@ function Contact() {
         </div>
         <div className="contact-background-text">
           <h3>Get in Touch with Us</h3>
-          <p>Contact Baan Cleaning for Exceptional Home and Office Cleaning</p>
+          <p>Contact Baans Cleaning for Exceptional Home and Office Cleaning</p>
         </div>
         <div className="contact-and-faq">
         <div className="contact-info">
-          <h4>Spotless Clean Homes with Baan Cleaning</h4>
+          <h4>Spotless Clean Homes with Baans Cleaning</h4>
        
         <div className="address">
           <h6>Address</h6>
@@ -107,7 +107,7 @@ function Contact() {
       
         <div className="user-testimonial">
           <h3>What Our Clients Say</h3>
-          <p>Don't just take our word for it! Hear from our satisfied clients who appreciate our exceptional cleaning services and unwavering commitment to detail. Read their stories with Baan Cleaning.</p>
+          <p>Don't just take our word for it! Hear from our satisfied clients who appreciate our exceptional cleaning services and unwavering commitment to detail. Read their stories with Baans Cleaning.</p>
         </div>
             <div className="testimonial">
             {fetchTestmonial}

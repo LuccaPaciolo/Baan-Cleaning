@@ -5,6 +5,7 @@ import Comprehensive from '../Components/Comprehensive'
 import Gallery from '../Components/Gallery'
 import CallToAction from '../Components/CallToAction'
 import Footer from '../Components/Footer'
+import IndustrialCleaning from '../Components/IndustrialCleaning'
 
 function Home() {
 
@@ -14,6 +15,7 @@ function Home() {
         <Discover/>
         <Comprehensive/>
         <Gallery/>
+        <IndustrialCleaning/>
         <CallToAction/>
         <Footer/>
     </div>

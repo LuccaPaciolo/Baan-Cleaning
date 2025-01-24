@@ -8,7 +8,7 @@ function CallToAction() {
 
         <div className="call-to-action-text">
             <h3>Start your journey to a spotless space</h3>
-            <p>Welcome to Baan Cleaning, your trusted partner in professional cleaning and janitorial services across Canada. Our skilled team delivers exceptional, eco-friendly cleaning solutions for both homes and offices. Transform your space today!</p>
+            <p>Welcome to Baans Cleaning, your trusted partner in professional cleaning and janitorial services across Canada. Our skilled team delivers exceptional, eco-friendly cleaning solutions for both homes and offices. Transform your space today!</p>
         </div>
 
         <div className="call-btn">

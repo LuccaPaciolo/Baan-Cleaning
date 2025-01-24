@@ -1,0 +1,53 @@
+.industrial-kitchen-cleaning {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    background-color: rgb(226, 240, 253);
+    justify-content: center;
+    align-items: center;
+}
+
+.industrial-text h1 {
+    color: var(--blue);
+    font-size: 1.7rem;
+    margin-bottom: .4em;
+}
+
+.industrial-text p {
+    padding-bottom: 1em;
+    line-height: 1.9rem;
+}
+
+.industrial-video  {
+    min-width:200px;
+    height: 100%;
+    border-radius: 1em;
+}
+
+.industrial-video video {
+    border-radius: 1em;
+    object-fit: contain;
+}
+
+@media only screen and (min-width: 765px) {
+    .industrial-kitchen-cleaning {
+        flex-direction: row;
+        padding: 3em;
+        gap: 1em;
+ 
+    }
+
+    .industrial-text{
+        width: 50%;
+    }
+    .industrial-video {
+        width: 50%;
+        height: inherit;
+    }
+    .industrial-text p {
+        padding-bottom: 1em;
+        line-height: 1.9rem;
+    }
+    
+
+}

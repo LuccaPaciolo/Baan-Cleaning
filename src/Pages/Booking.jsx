@@ -12,7 +12,7 @@ function Booking() {
       </div>
       <div className="booking-background-text">
         <h3>Book Your Cleaning Now</h3>
-        <p>Discover Excellence: Reserve Your Home Cleaning with Baan Cleaning</p>
+        <p>Discover Excellence: Reserve Your Home Cleaning with Baans Cleaning</p>
       </div>
       <div className="booking-text">
         <h3> Book a Professional Home Cleaning Today</h3>

@@ -1,189 +1,156 @@
-.service-container {
+
+.service-hero-section {
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: rgb(2, 23, 6);
 }
 
-.service-background {
-    width: 100%;
-    height: 20em;
-    background-color: black;
-    position: relative;
+.service-hero-text {
+    padding: 2em;
+}
+.service-hero-text h1 {
+    color:aliceblue;
+    font-size: 1.7rem;
 }
 
-.service-background img {
-    width: 100%;
+.service-hero-text p {
+    color: rgb(167, 248, 167);
+}
+
+.service-hero-image {
+    min-width: 256px;
     height: 100%;
-    opacity: .3;
-    object-fit: cover;
+    padding: 0em 2em 3em 2em;
+
 }
 
-.service-background-text {
-    position: absolute;
+.service-hero-image img {
+    width: 100%;
+   
 }
 
-.service-background-text h3 {
-    font-size: 1.8rem;
-    padding: 1em;
-    color:aliceblue;
-}
-
-.service-background-text p {
-    padding: 0em 2em 2em 2em;
-    color:aliceblue;
-}
-
-.services {
+.home-cleaning-service,
+.office-cleaning-service {
     display: flex;
     flex-direction: column;
     padding: 2em;
 }
 
-.services h4 {
-    color: orange;
+
+.home-cleaning-service-image,
+.office-cleaning-service-image
+ {
+    height: 340px;
+    min-width: 253px;
+    margin-top: 2em;
 }
 
-.services p {
-    color:aliceblue;
-}
-
-.services img {
+.home-cleaning-service-image img,
+.office-cleaning-service-image img
+{
+    height: 100%;
     width: 100%;
-    margin: 3em 0em 3em 0em;
+    object-fit: cover;
     border-radius: 1em;
 }
-
-.why-choose-use {
-    display: flex;
-    flex-direction: column;
+.home-cleaning-service-text h3,
+.office-cleaning-service-text h3 {
+    color: var(--blue);
+    margin-bottom: .7em;
 }
 
-.why-us-text {
-    padding: 2em;
-}
-
-.why-us-text h3 {
-    color: var(--green)
-}
-
-.why-us-text p {
-    color:aliceblue;
-}
-
-.why-us-image img {
-    width: 100%;
-    padding: 2em;
-}
-
-.service-cards {
-    display: flex;
-    flex-direction: column;
-    padding: 1.6em;
-}
-
-.service-cards h6 {
-    color: var(--green)
-}
-
-.service-cards p {
-    color:aliceblue;
-}
-
-.card-1, .card-2, .card-3, .card-4 {
-    margin-bottom: 2em;
-    padding: .8em;
-    background-color: rgb(3, 53, 31);
-}
-
-
-@media only screen and (min-width: 601px) {
-
-    
-    .service-background-text {
-    width: 80%;
-    }
-    .service-background-text h3 {
-        font-size: 2rem;
-        text-align: left;
-    }    
-    .service-background-text p {
-        text-align: left;
-    }
-
-    .service-1, .service-2 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-self: center;
-        width: 100%;
-        gap: 4em;
-        padding: 3em;
-    }
-
-    .service-1-text, .service-2-text {
-        width: 60%;
-    }
-
-    .service-1-image, .service-2-image{
-        width: 40%;
-    }
-
-    
-    .service-1-image img, .service-2-image img {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
-
-    .why-choose-use {
-        display: flex;
+@media only screen and (min-width: 765px) {
+    .service-hero-section {
         flex-direction: row;
         padding: 2em;
-    }
-
-    .why-us-text {
-        width: 60%;
-    }
-
-    .why-us-image {
-        width: 40%;
-    }
-
-    .service-cards{
-        display: flex;
-        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
         gap: 1em;
+
     }
+
+    .service-hero-text {
+        width: 60%;
+        padding: 0em;
+        margin: 0em;
+    }
+
+    .service-hero-image {
+        width: 40%;
+        padding: 0em;
+        margin:0em;
+    }
+
+    .services {
+        padding: 5em 0em;
+    }
+    
+
+    .office-cleaning-service {
+        flex-direction: row;
+        flex-direction: row-reverse;
+        padding: 1em 3em;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2em;
+    }
+
+    .home-cleaning-service{
+        flex-direction: row;
+        padding: 1em 3em;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2em;
+    }
+
+    .home-cleaning-service-image,
+    .office-cleaning-service-image
+    {
+   width: 50%;
+   padding: 0em;
+   margin: 0em
+}
+
+.home-cleaning-service-text,
+.office-cleaning-service-text
+{
+width: 50%;
+}
+
+    
+}
+
+
+@media only screen and (min-width: 1025px) {
+
+    .service-hero-text h1 {
+        font-size: 3rem;
+}
+
+.service-hero-text p{
+    font-size: 1.5rem
+}
+
+.home-cleaning-service-text,
+.office-cleaning-service-text
+ {
+    padding: 3em;
 
 }
 
-@media only screen and (min-width: 1024px) {
+.home-cleaning-service-image,
+.office-cleaning-service-image {
+    margin-top: 2em;
+}
 
-    .service-background-text {
-        width: 50%;
-        }
-        .service-background-text h3 {
-            font-size: 2rem;
-            text-align: left;
-        }    
-        .service-background-text p {
-            text-align: left;
-        }
-        .service-1-text, .service-2-text {
-            padding: 5em;
-            line-height: 2.3rem;
-        }
+.home-cleaning-service-text p,
+.office-cleaning-service-text p {
+    line-height: 2rem;
+    
+}
 
-        .why-us-text {
-            width: 60%;
-            padding: 6em;
-            line-height: 2.3rem;
-        }
 
-        .service-cards {
-            font-size: 1.4rem;
-            padding: 2em;
-        }
+
+
 
 }
